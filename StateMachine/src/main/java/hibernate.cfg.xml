@@ -11,7 +11,7 @@
         <property name="hibernate.connection.password">admin</property>
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
         <!-- <property name="hibernate.hbm2ddl.auto">create-drop</property> -->
-        <property name="hibernate.hbm2ddl.auto">validate</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
 		<property name="hibernate.archive.autodetection">class</property>
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.format_sql">true</property>

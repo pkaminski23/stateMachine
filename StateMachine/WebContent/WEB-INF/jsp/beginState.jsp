@@ -2,48 +2,67 @@
 <html>
 <head>
     <title>State Machine</title>
+    <%@include file="head.jsp" %>
 </head>
 <body>
-<a href="list?page=0">list</a>|  
+    <%@include file="top.jsp" %>
+    		<div class="container bs-docs-container">
+			<div class="row">
+		    	<div class="col-md-12">
+<a href="list">list</a>|  
 <a href="beginState">beginState</a>
 <h2>Create document</h2>
 <form:form commandName="command" id="actionForm" method="POST" action="/StateMachine/createState">
    <table>
-    <tr>
-    	<td></td>
+    <div class="form-group">
         <td><form:hidden path="id" hidden="hidden"/></td>
-    </tr>
-    <tr>
-        <td><form:label path="name">Name</form:label></td>
-        <td><form:input path="name" /></td>
-    </tr>
-    <tr>
-        <td><form:label path="content">Content</form:label></td>
-        <td><form:input path="content"/></td>
-    </tr>
-    <tr>
-        <td><form:label path="reason">Reason</form:label></td>
-        <td><form:input id="reason" path="reason" disabled="true"/></td>
-    </tr>
-    <tr>
-        <td><form:label path="created">Created At</form:label></td>
-        <td><form:input path="created" disabled="true"/></td>
-    </tr>
-    <tr>
-        <td><form:label path="verified">Verfified At</form:label></td>
-        <td><form:input path="verified" disabled="true"/></td>
-    </tr>
-    <tr>
-        <td><form:label path="accepted">Accepted At</form:label></td>
-        <td><form:input path="accepted" disabled="true"/></td>
-    </tr>
-    <tr>
-        <td colspan="2">
-            <input type="button" onclick="checkValues();" value="Submit"/>
-        </td>
-    </tr>
+    </div>
+    <div class="form-group">
+        <form:label path="name" class="col-sm-2 control-label">Name</form:label>
+        <div class="col-sm-10">
+        <form:input path="name" class="form-control"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <form:label path="content" class="col-sm-2 control-label">Content</form:label>
+        <div class="col-sm-10">
+        <form:input path="content" class="form-control"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <form:label path="reason" class="col-sm-2 control-label">Reason</form:label>
+        <div class="col-sm-10">
+        <form:input id="reason" path="reason" disabled="true" class="form-control"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <form:label path="created" class="col-sm-2 control-label">Created At</form:label>
+        <div class="col-sm-10">
+        <form:input path="created" disabled="true" class="form-control"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <form:label path="verified" class="col-sm-2 control-label">Verfified At</form:label>
+        <div class="col-sm-10">
+        <form:input path="verified" disabled="true" class="form-control"/>
+        </d>
+    </div>
+    <div class="form-group">
+        <form:label path="accepted" class="col-sm-2 control-label">Accepted At</form:label>
+        <div class="col-sm-10">
+        <form:input path="accepted" disabled="true" class="form-control"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+           <button class="btn btn-default" onclick="checkValues();">Submit</button>
+        </div>
+    </div>
 </table>  
 </form:form>
+</div>
+</div>
+</div>
 <script type="text/javascript">
 	function checkValues(){
 		var nameValue = document.getElementById('name').value;
@@ -55,5 +74,6 @@
 		}
 	}
 </script>
+<%@include file="footer.jsp" %>
 </body>
 </html>

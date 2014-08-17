@@ -131,7 +131,7 @@ public class StateController {
     }
     
     @RequestMapping(value = "/list", method = RequestMethod.GET)
-    public ModelAndView list(@RequestParam String page) {
+    public ModelAndView list(@RequestParam(required=false) String page) {
     	ModelAndView modelAndView = new ModelAndView("list");
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		session.beginTransaction();

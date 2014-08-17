@@ -4,9 +4,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Welcome Page</title>
+    <%@include file="head.jsp" %>
 </head>
 <body>
-Message is: ${message}  
+    <%@include file="top.jsp" %>
+    <div class="container bs-docs-container">
+		<div class="row">
+		    <div class="col-md-12">
+				Message is: ${message}
+			</div>
+		</div>
+	</div>  
+<%@include file="footer.jsp" %>
 </body>
 </html>
