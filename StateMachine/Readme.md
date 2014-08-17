@@ -6,3 +6,4 @@
 3. Uzyta baza danych to postgres.
 4. Uzyta wersja Javy: wersja 7.
 5. Do wlaczenia bibliotek zostal uzyty maven.
+6. Serwer aplikacji: Tomcat 7.0
